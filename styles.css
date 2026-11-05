@@ -1,0 +1,91 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 480px;
+    box-shadow: 0 10px 30px #3335;
+}
+
+h1 {
+    color: #6045a5;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.card {
+    height: 85px;
+    background: #7655bd;
+    border-radius: 12px;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: transparent;
+    transition: 0.3s;
+}
+
+.card.flipped,
+.card.matched {
+    background: #e7e1ff;
+    color: #333;
+}
+
+.card.matched {
+    background: #b9f5ce;
+    cursor: default;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #6045a5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #402b7a;
+}
+
+#message {
+    color: #299b58;
+    font-size: 20px;
+}
+
+@media (max-width: 400px) {
+    .card {
+        height: 70px;
+    }
+}
